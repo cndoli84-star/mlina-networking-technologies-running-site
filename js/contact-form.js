@@ -96,7 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } catch (error) {
 
-            console.error("EmailJS error details:", error);
+            console.error("EmailJS error details:", {
+    status: error.status,
+    text: error.text,
+    message: error.message
+});
 
             showStatus(
                 "We could not submit your request. Please try again or email internetworkingsolutions.cc@gmail.com directly.",
@@ -113,3 +117,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
