@@ -1,28 +1,34 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- MLINA Homepage -->
   <url>
-    <loc>https://https://mlina.internetworkingsolutions.cc//</loc>
+    <loc>https://mlina.internetworkingsolutions.cc/</loc>
     <priority>1.0</priority>
   </url>
 
+  <!-- About MLINA -->
   <url>
-    <loc>https://https://mlina.internetworkingsolutions.cc//about.html</loc>
+    <loc>https://mlina.internetworkingsolutions.cc/about.html</loc>
     <priority>0.8</priority>
   </url>
 
+  <!-- ICT and ELV Services -->
   <url>
-    <loc>https://https://mlina.internetworkingsolutions.cc//services.html</loc>
+    <loc>https://mlina.internetworkingsolutions.cc/services.html</loc>
     <priority>0.9</priority>
   </url>
 
+  <!-- Projects Portfolio -->
   <url>
-    <loc>https://https://mlina.internetworkingsolutions.cc//portfolio.html</loc>
+    <loc>https://mlina.internetworkingsolutions.cc/portfolio.html</loc>
     <priority>0.8</priority>
   </url>
 
+  <!-- Contact MLINA -->
   <url>
-    <loc>https://https://mlina.internetworkingsolutions.cc//contact.html</loc>
+    <loc>https://mlina.internetworkingsolutions.cc/contact.html</loc>
     <priority>0.8</priority>
   </url>
 
