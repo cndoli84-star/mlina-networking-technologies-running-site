@@ -57,20 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // The form is handled exclusively by js/contact-form.js using EmailJS.
 
 });
-
-
-
-// ACCESSIBLE TECHNOLOGY BRAND CAROUSEL
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-brand-marquee]').forEach((marquee) => {
-    const section = marquee.closest('.brand-strip');
-    const button = section && section.querySelector('.brand-motion-toggle');
-    if (!button) return;
-    button.addEventListener('click', () => {
-      const paused = marquee.classList.toggle('is-paused');
-      button.setAttribute('aria-pressed', String(paused));
-      button.textContent = paused ? 'Resume' : 'Pause';
-      button.setAttribute('aria-label', paused ? 'Resume brand logo movement' : 'Pause brand logo movement');
-    });
-  });
-});
