@@ -299,3 +299,25 @@ textarea:focus-visible {
   .hero-panel img { max-height: 205px; }
   .hero .trust-line span { font-size: 11px; }
 }
+
+
+/* TECHNOLOGY BRAND CAROUSEL */
+.brand-strip{position:relative;padding:24px 0 17px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.brand-strip-head{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:17px}
+.brand-strip-kicker{margin:0 0 3px;color:#397d18;font-size:10px;font-weight:800;letter-spacing:.14em}
+.brand-strip-head h2{margin:0;color:var(--navy);font-size:clamp(18px,2vw,23px);line-height:1.25}
+.brand-strip-copy{margin:5px 0 0;color:#465d73;font-size:13px;line-height:1.5}
+.brand-motion-toggle{flex:0 0 auto;border:1px solid #b9c9d8;border-radius:999px;background:#fff;color:var(--navy);padding:8px 14px;font:600 12px Inter,Arial,sans-serif;cursor:pointer}
+.brand-motion-toggle:hover{background:#f3f8fc;border-color:var(--blue)}
+.brand-motion-toggle:focus-visible,.brand-item:focus-visible{outline:3px solid #0865a8;outline-offset:4px}
+.brand-marquee{overflow:hidden;width:100%;mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent)}
+.brand-track{display:flex;width:max-content;animation:mlina-brand-scroll 72s linear infinite;will-change:transform}
+.brand-marquee:hover .brand-track,.brand-marquee:focus-within .brand-track,.brand-marquee.is-paused .brand-track{animation-play-state:paused}
+.brand-group{display:flex;flex:0 0 auto;align-items:center;gap:16px;padding:3px 8px}
+.brand-item{display:flex;align-items:center;justify-content:center;gap:9px;min-width:150px;min-height:58px;padding:10px 15px;border:1px solid #e3ebf2;border-radius:10px;background:#fff;color:#203b55;text-decoration:none;font-size:13px;font-weight:750;white-space:nowrap;transition:border-color .2s ease,background .2s ease,transform .2s ease}
+.brand-item:hover{border-color:#9dbbd3;background:#f7fbfe;transform:translateY(-2px)}
+.brand-item img{width:27px;height:27px;object-fit:contain;border-radius:4px}
+.brand-strip-note{margin:10px auto 0;color:#607286;font-size:10px;line-height:1.45}
+@keyframes mlina-brand-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:640px){.brand-strip{padding:19px 0 14px}.brand-strip-head{align-items:flex-start;gap:10px}.brand-strip-copy{max-width:34ch;font-size:12px}.brand-motion-toggle{padding:7px 10px;font-size:11px}.brand-item{min-width:132px;min-height:52px;padding:8px 11px;font-size:12px}.brand-group{gap:10px}.brand-track{animation-duration:58s}}
+@media(prefers-reduced-motion:reduce){.brand-track{animation:none;transform:none}.brand-item{transition:none}}
