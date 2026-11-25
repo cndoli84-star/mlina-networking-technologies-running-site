@@ -1,30 +1,20 @@
-# MLINA Technology Carousel Brand Logos
+# MLINA Technology Carousel Brand Artwork
 
-Place brand logo image files in this folder. The carousel uses local assets so it does not depend on third-party image hosts.
+The carousel loads local SVG files from this folder. This avoids third-party image hotlinks and keeps the artwork under the website's asset paths.
 
-## Logos already installed
+## Files in this folder
 
-- cisco.svg
-- mikrotik.svg
-- ubiquiti.svg
-- tplink.svg
-- junipernetworks.svg
-- bosch.svg
-- fortinet.svg
-- panasonic.svg
+There are 24 brand SVG assets. Eight use brand icons sourced from the Simple Icons project (Cisco, MikroTik, Ubiquiti, TP-Link, Juniper Networks, Bosch, Fortinet and Panasonic). The other 16 are custom-coloured typographic brand illustrations created for this website's carousel. They are **not official manufacturer logo files** and should not be represented as official marks or evidence of an authorised partnership.
 
-These eight icon SVGs were sourced from the Simple Icons project: https://github.com/simple-icons/simple-icons . Brand names and trademarks remain the property of their respective owners.
+The brand names and trademarks belong to their respective owners. For a formal partner page or co-branding use, replace each custom illustration with the exact official artwork supplied or published by the manufacturer, and follow that manufacturer's trademark/brand-use rules.
 
-## Add the remaining manufacturer logos
+## Replacing an illustration with an official logo
 
-For each additional brand:
-1. Download its official logo from the manufacturer's website, preferably its press, media, or brand-assets page.
+1. Obtain the logo from the manufacturer's official media, press, partner or brand-assets page.
 2. Prefer SVG with a transparent background. A transparent PNG is also suitable.
-3. Save it in this folder using a short lowercase filename, for example `hikvision.svg`, `dahua.svg`, `axis.svg`, `zkteco.svg`, `suprema.svg`, `ruckus.svg`, `aruba.svg`, `ruijie.svg`, `sophos.svg`, `grandstream.svg`, `yeastar.svg`, `avaya.svg`, `commscope.svg`, `panduit.svg`, or `yealink.svg`.
-4. In the corresponding card in the page HTML, replace the letter tile (`<span class="brand-mark">...</span>`) with:
-   `<img class="brand-logo" src="assets/brands/your-file.svg" alt="Brand name logo" loading="lazy">`
-5. Commit the file and HTML change to the `main` branch. Use the exact filename and extension.
+3. Keep the existing filename where possible (for example, `hikvision.svg`, `dahua.svg`, `ruckus.svg`, `aruba.svg`, `zkteco.svg`, `suprema.svg`, `grandstream.svg`, `yeastar.svg`, `avaya.svg`, `commscope.svg`, `panduit.svg`, or `yealink.svg`).
+4. Upload the replacement file to this folder in GitHub and commit to `main`. The carousel already references these local filenames, so no HTML change is needed if the filename stays the same.
 
-If you use PNG, change the image source to the .png filename. Keep the logo image transparent and use a reasonably high-resolution image (ideally at least 300 px wide). Do not hotlink logos from search-result preview URLs.
+For PNG, keep the same base filename but update the corresponding `src` in the page HTML to the .png extension. Aim for at least 300 px wide and retain a transparent background.
 
-The carousel CSS automatically sizes local logos. If you send the logo files here, they can be added to this folder and wired into the carousel for you.
+The custom artwork is designed to make the carousel visually consistent and colourful, but it is not a substitute for approved corporate logo artwork.
