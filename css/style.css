@@ -84,3 +84,118 @@
         width: 100%;
     }
 }
+
+
+/* =========================================================
+   ACCESSIBILITY & CORPORATE READABILITY UPDATE
+   WCAG AA text contrast, clearer type, visible keyboard focus
+   ========================================================= */
+:root {
+  --navy: #062e59;
+  --blue: #0865a8;
+  --green: #397d18;
+  --ink: #142a42;
+  --muted: #4b5f73;
+  --pale: #f3f8fc;
+  --line: #dce7ef;
+  --white: #fff;
+}
+
+html { scroll-padding-top: 110px; }
+body { font-size: 16px; line-height: 1.7; color: var(--ink); }
+.fiber-field { display: none; }
+
+.eyebrow,
+.brand-copy small,
+.values b,
+.steps article > b,
+.process-grid b { color: var(--green); }
+
+.lead,
+.page-hero p,
+.notice p { color: var(--muted); }
+
+.trust-line { color: var(--muted); font-size: 13px; }
+.topline { font-size: 13px; }
+.nav > a,
+.nav-drop > button { font-size: 14px; }
+.drop-menu a { font-size: 14px; }
+
+.service-card p,
+.values p,
+.detail-card p,
+.project-grid p,
+.process-grid p,
+.notice p { font-size: 14px; color: var(--muted); }
+
+.learn,
+.text-link,
+.contact-method a { color: var(--blue); }
+.nav-cta { background: var(--green) !important; color: #fff !important; }
+.primary { background: var(--blue); color: #fff; }
+.primary:hover,
+.nav-cta:hover { background: var(--navy) !important; }
+
+.lead-form label { font-size: 14px; color: #354b60; }
+.lead-form input,
+.lead-form select,
+.lead-form textarea { font-size: 16px; }
+.form-note { font-size: 13px; color: var(--muted); }
+.footer p { color: #d5e3ee; font-size: 14px; }
+.footer-grid > div > a:not(:has(img)) { font-size: 14px; color: #d5e3ee; }
+.footer .small { font-size: 13px; }
+.foot-bottom { font-size: 12px; }
+.footer-link { color: #b8ef86 !important; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0865a8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+  outline: 3px solid #0865a8;
+  outline-offset: 1px;
+  border-color: #0865a8;
+  box-shadow: 0 0 0 2px rgba(8, 101, 168, .14);
+}
+
+.service-card:focus-visible,
+.drop-menu a:focus-visible { outline-offset: 4px; }
+.float-wa { background: #087a45; }
+.float-wa:focus-visible { outline-color: #fff; }
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  padding: 10px 16px;
+  transform: translateY(-150%);
+  background: #fff;
+  color: var(--navy);
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  font-weight: 700;
+}
+.skip-link:focus { transform: translateY(0); }
+
+@media (max-width: 760px) {
+  .nav { max-height: calc(100vh - 100px); overflow-y: auto; }
+  .nav > a,
+  .nav-drop > button { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
