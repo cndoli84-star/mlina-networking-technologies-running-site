@@ -40,68 +40,203 @@
 
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@graph":[
-  {
-   "@type":"Organization",
-   "@id":"https://mlina.internetworkingsolutions.cc/#organization",
-   "name":"Mlina Networking Technologies Ltd.",
-   "url":"https://mlina.internetworkingsolutions.cc/",
-   "logo":"https://mlina.internetworkingsolutions.cc/assets/mlina-logo.jpg",
-   "description":"Professional ELV, ICT infrastructure, fibre optics, structured cabling, CCTV, enterprise networking, wireless connectivity, access control and IT solutions.",
-   "email":"info@internetworkingsolutions.cc",
-   "telephone":["+254724367535","+254727270430"],
-   "contactPoint":{
-    "@type":"ContactPoint",
-    "telephone":"+254724367535",
-    "email":"info@internetworkingsolutions.cc",
-    "contactType":"business enquiries",
-    "availableLanguage":["English","Swahili"]
-   }
-  },
-  {
-   "@type":"WebSite",
-   "@id":"https://mlina.internetworkingsolutions.cc/#website",
-   "url":"https://mlina.internetworkingsolutions.cc/",
-   "name":"Mlina Networking Technologies Ltd.",
-   "publisher":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"},
-   "inLanguage":"en-KE"
-  },
-  {
-   "@type":"WebPage",
-   "@id":"https://mlina.internetworkingsolutions.cc/services.html#webpage",
-   "url":"https://mlina.internetworkingsolutions.cc/services.html",
-   "name":"ICT, ELV, CCTV and Fibre Optic Services",
-   "description":"Professional ICT, ELV, CCTV, fibre optics, campus Wi-Fi, structured cabling, access control, IP PBX and infrastructure services in Kenya.",
-   "isPartOf":{"@id":"https://mlina.internetworkingsolutions.cc/#website"},
-   "about":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"},
-   "breadcrumb":{"@id":"https://mlina.internetworkingsolutions.cc/services.html#breadcrumb"},
-   "inLanguage":"en-KE"
-  },
-  {
-   "@type":"BreadcrumbList",
-   "@id":"https://mlina.internetworkingsolutions.cc/services.html#breadcrumb",
-   "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://mlina.internetworkingsolutions.cc/"},
-    {"@type":"ListItem","position":2,"name":"Services","item":"https://mlina.internetworkingsolutions.cc/services.html"}
-   ]
-  },
-  {
-   "@type":"ItemList",
-   "name":"ICT and ELV Services",
-   "itemListElement":[
-    {"@type":"ListItem","position":1,"item":{"@type":"Service","name":"CCTV Installation and Surveillance","url":"https://mlina.internetworkingsolutions.cc/services.html#cctv","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":2,"item":{"@type":"Service","name":"Campus Wi-Fi Solutions","url":"https://mlina.internetworkingsolutions.cc/services.html#wifi","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":3,"item":{"@type":"Service","name":"Structured Cabling and Fibre Optics","url":"https://mlina.internetworkingsolutions.cc/services.html#cabling","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":4,"item":{"@type":"Service","name":"Access Control Systems","url":"https://mlina.internetworkingsolutions.cc/services.html#access","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":5,"item":{"@type":"Service","name":"Intruder Alarm Systems","url":"https://mlina.internetworkingsolutions.cc/services.html#alarm","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":6,"item":{"@type":"Service","name":"Business IP PBX and VoIP","url":"https://mlina.internetworkingsolutions.cc/services.html#ip-pbx","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":7,"item":{"@type":"Service","name":"UPS and Power Backup","url":"https://mlina.internetworkingsolutions.cc/services.html#ups","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":8,"item":{"@type":"Service","name":"Website Hosting and IT Solutions","url":"https://mlina.internetworkingsolutions.cc/services.html#hosting","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}},
-    {"@type":"ListItem","position":9,"item":{"@type":"Service","name":"LAN and WAN Networking","url":"https://mlina.internetworkingsolutions.cc/services.html#lan-wan","provider":{"@id":"https://mlina.internetworkingsolutions.cc/#organization"}}}
-   ]
-  }
- ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mlina.internetworkingsolutions.cc/#organization",
+      "name": "Mlina Networking Technologies Ltd.",
+      "url": "https://mlina.internetworkingsolutions.cc/",
+      "logo": "https://mlina.internetworkingsolutions.cc/assets/mlina-logo.jpg",
+      "description": "Professional ELV, ICT infrastructure, fibre optics, structured cabling, CCTV, enterprise networking, wireless connectivity, access control and IT solutions.",
+      "email": "info@internetworkingsolutions.cc",
+      "telephone": [
+        "+254724367535",
+        "+254727270430"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254724367535",
+        "email": "info@internetworkingsolutions.cc",
+        "contactType": "business enquiries",
+        "availableLanguage": [
+          "English",
+          "Swahili"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mlina.internetworkingsolutions.cc/#website",
+      "url": "https://mlina.internetworkingsolutions.cc/",
+      "name": "Mlina Networking Technologies Ltd.",
+      "publisher": {
+        "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+      },
+      "inLanguage": "en-KE"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mlina.internetworkingsolutions.cc/services.html#webpage",
+      "url": "https://mlina.internetworkingsolutions.cc/services.html",
+      "name": "ICT, ELV, CCTV and Fibre Optic Services",
+      "description": "Professional ICT, ELV, CCTV, fibre optics, campus Wi-Fi, structured cabling, access control, IP PBX and infrastructure services in Kenya.",
+      "isPartOf": {
+        "@id": "https://mlina.internetworkingsolutions.cc/#website"
+      },
+      "about": {
+        "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://mlina.internetworkingsolutions.cc/services.html#breadcrumb"
+      },
+      "inLanguage": "en-KE"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mlina.internetworkingsolutions.cc/services.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://mlina.internetworkingsolutions.cc/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://mlina.internetworkingsolutions.cc/services.html"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "ICT and ELV Services",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "CCTV Installation and Surveillance",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#cctv",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Campus Wi-Fi Solutions",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#wifi",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Structured Cabling and Fibre Optics",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#cabling",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Access Control Systems",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#access",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Intruder Alarm Systems",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#alarm",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Business IP PBX and VoIP",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#ip-pbx",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "UPS and Power Backup",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#ups",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "Website Hosting and IT Solutions",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#hosting",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "LAN and WAN Networking",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#lan-wan",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "Network Security and Cybersecurity",
+            "url": "https://mlina.internetworkingsolutions.cc/services.html#cybersecurity",
+            "provider": {
+              "@id": "https://mlina.internetworkingsolutions.cc/#organization"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 </head>
