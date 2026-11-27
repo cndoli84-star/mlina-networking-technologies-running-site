@@ -787,7 +787,7 @@ textarea:focus-visible {
 
 
 /* SERVICES DROPDOWN — TWO-COLUMN, COMPACT, ACCESSIBLE STATES */
-.nav-drop>.drop-menu{
+.nav>.nav-drop:first-of-type>.drop-menu{
   display:none;
   position:absolute;
   top:calc(100% + 8px);
@@ -806,8 +806,8 @@ textarea:focus-visible {
   box-shadow:0 14px 35px #092b4c24;
   z-index:1200;
 }
-.nav-drop.open>.drop-menu{display:grid}
-.nav-drop>.drop-menu a{
+.nav>.nav-drop:first-of-type.open>.drop-menu{display:grid}
+.nav>.nav-drop:first-of-type>.drop-menu a{
   display:flex;
   align-items:center;
   min-width:0;
@@ -821,20 +821,20 @@ textarea:focus-visible {
   overflow-wrap:anywhere;
   transition:background-color .16s ease,color .16s ease;
 }
-.nav-drop>.drop-menu a:hover,
-.nav-drop>.drop-menu a:focus-visible{
+.nav>.nav-drop:first-of-type>.drop-menu a:hover,
+.nav>.nav-drop:first-of-type>.drop-menu a:focus-visible{
   background:var(--green);
   color:#fff;
   outline:none;
 }
-.nav-drop>.drop-menu a[aria-current="page"],
-.nav-drop>.drop-menu a.active{
+.nav>.nav-drop:first-of-type>.drop-menu a[aria-current="page"],
+.nav>.nav-drop:first-of-type>.drop-menu a.active{
   background:var(--blue);
   color:#fff;
 }
-.nav-drop.active-parent>button,
-.nav-drop.open>button,
-.nav-drop>button[aria-current="page"]{
+.nav>.nav-drop:first-of-type.active-parent>button,
+.nav>.nav-drop:first-of-type.open>button,
+.nav>.nav-drop:first-of-type>button[aria-current="page"]{
   color:#fff;
   background:var(--blue);
   border-radius:6px;
@@ -843,7 +843,7 @@ textarea:focus-visible {
 }
 .nav-drop>button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
 @media(max-width:760px){
-  .nav-drop>.drop-menu{
+  .nav>.nav-drop:first-of-type>.drop-menu{
     position:static;
     width:100%;
     min-width:0;
@@ -857,19 +857,19 @@ textarea:focus-visible {
     border:1px solid var(--line);
     box-shadow:none;
   }
-  .nav-drop>.drop-menu a{
+  .nav>.nav-drop:first-of-type>.drop-menu a{
     min-height:40px;
     padding:8px 7px;
     font-size:11.5px;
     line-height:1.3;
   }
-  .nav-drop.active-parent>button,
-  .nav-drop.open>button,
-  .nav-drop>button[aria-current="page"]{
+  .nav>.nav-drop:first-of-type.active-parent>button,
+  .nav>.nav-drop:first-of-type.open>button,
+  .nav>.nav-drop:first-of-type>button[aria-current="page"]{
     width:100%;
     padding:11px 10px;
   }
 }
 @media(prefers-reduced-motion:reduce){
-  .nav-drop>.drop-menu a{transition:none}
+  .nav>.nav-drop:first-of-type>.drop-menu a{transition:none}
 }
