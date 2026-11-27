@@ -43,7 +43,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=mlina-dropdown-fix-20261127">
+  <link rel="stylesheet" href="css/style.css?v=mlina-carousel-fix-20261127-3">
 
   <link rel="icon" href="assets/mlina-logo.jpg">
   <link rel="apple-touch-icon" href="assets/mlina-logo.jpg">
@@ -450,26 +450,55 @@
   </div>
 </section>
 <section class="home-solutions-gallery" aria-label="MLINA core technology solutions">
-  <div class="home-solutions-grid">
-    <a class="home-solution-card" href="lan-wan-enterprise-networking.html">
-      <span class="home-solution-image"><img src="https://fastcoresas.com/img/division_infraestructura.png" alt="Enterprise server racks and network hardware in a secure data centre" width="640" height="420" loading="lazy" decoding="async"></span>
-      <span class="home-solution-copy"><strong>Enterprise Networking</strong><small>Reliable LAN, WAN, Wi-Fi and server-room infrastructure</small></span>
-    </a>
-    <a class="home-solution-card" href="fibre-optic-otdr.html">
-      <span class="home-solution-image"><img src="https://karatechnologies.net/wp-content/uploads/2025/07/Fiber-Optic-Installation-768x768.jpg" alt="Technician connecting fibre optic cables to a rack-mounted fibre patch panel" width="640" height="420" loading="lazy" decoding="async"></span>
-      <span class="home-solution-copy"><strong>Fibre Optics &amp; Cabling</strong><small>Fibre installation, structured cabling, testing and certification</small></span>
-    </a>
-    <a class="home-solution-card" href="cctv-installation.html">
-      <span class="home-solution-image"><img src="https://alexsco.com/assets/service-cameras-BQlRBu-o.jpg" alt="Professional CCTV security camera installed on a commercial building" width="640" height="420" loading="lazy" decoding="async"></span>
-      <span class="home-solution-copy"><strong>CCTV &amp; Surveillance</strong><small>IP cameras, recording, monitoring and security integration</small></span>
-    </a>
-    <a class="home-solution-card" href="access-control-installation.html">
-      <span class="home-solution-image"><img src="https://lirp.cdn-website.com/fa11ece8/dms3rep/multi/opt/d1129ed0-a576-44a7-b2fc-0679406a66b8-640w.jpg" alt="Biometric access control terminal installed beside a modern office entrance" width="640" height="420" loading="lazy" decoding="async"></span>
-      <span class="home-solution-copy"><strong>Access Control &amp; Security</strong><small>Biometric entry, door access and integrated protection</small></span>
-    </a>
+  <div class="wrap">
+    <div class="home-carousel-heading">
+      <span class="eyebrow">OUR CORE SOLUTIONS</span>
+      <h2>Integrated Technology Solutions for Your Organisation</h2>
+      <p>Explore our networking, fibre, surveillance and access-control capabilities.</p>
+    </div>
+    <div class="home-solutions-carousel" data-home-carousel role="region" aria-roledescription="carousel" aria-label="MLINA technology solutions">
+      <div class="home-carousel-viewport">
+        <div class="home-carousel-track">
+          <article class="home-carousel-slide">
+            <a class="home-solution-card" href="lan-wan-enterprise-networking.html">
+              <span class="home-solution-image"><img src="https://fastcoresas.com/img/division_infraestructura.png" alt="Enterprise server racks and network hardware in a secure data centre" width="640" height="420" loading="lazy" decoding="async"></span>
+              <span class="home-solution-copy"><strong>Enterprise Networking</strong><small>Reliable LAN, WAN, Wi-Fi and server-room infrastructure</small><span class="learn">Explore networking solutions →</span></span>
+            </a>
+          </article>
+          <article class="home-carousel-slide">
+            <a class="home-solution-card" href="fibre-optic-otdr.html">
+              <span class="home-solution-image"><img src="https://karatechnologies.net/wp-content/uploads/2025/07/Fiber-Optic-Installation-768x768.jpg" alt="Fibre optic installation and termination at a network patch panel" width="640" height="420" loading="lazy" decoding="async"></span>
+              <span class="home-solution-copy"><strong>Fibre Optics &amp; Cabling</strong><small>Fibre installation, structured cabling, testing and certification</small><span class="learn">Explore fibre solutions →</span></span>
+            </a>
+          </article>
+          <article class="home-carousel-slide">
+            <a class="home-solution-card" href="cctv-installation.html">
+              <span class="home-solution-image"><img src="https://alexsco.com/assets/service-cameras-BQlRBu-o.jpg" alt="Professional CCTV security camera installed on a commercial building" width="640" height="420" loading="lazy" decoding="async"></span>
+              <span class="home-solution-copy"><strong>CCTV &amp; Surveillance</strong><small>IP cameras, recording, monitoring and security integration</small><span class="learn">Explore CCTV solutions →</span></span>
+            </a>
+          </article>
+          <article class="home-carousel-slide">
+            <a class="home-solution-card" href="access-control-installation.html">
+              <span class="home-solution-image"><img src="https://lirp.cdn-website.com/fa11ece8/dms3rep/multi/opt/d1129ed0-a576-44a7-b2fc-0679406a66b8-640w.jpg" alt="Biometric access control terminal beside an office entrance" width="640" height="420" loading="lazy" decoding="async"></span>
+              <span class="home-solution-copy"><strong>Access Control &amp; Security</strong><small>Biometric entry, door access and integrated protection</small><span class="learn">Explore access solutions →</span></span>
+            </a>
+          </article>
+        </div>
+      </div>
+      <div class="home-carousel-controls">
+        <button type="button" class="home-carousel-prev" aria-label="Previous solution">←</button>
+        <div class="home-carousel-dots" aria-label="Choose a solution slide">
+          <button type="button" aria-label="Show slide 1" aria-current="true"></button>
+          <button type="button" aria-label="Show slide 2"></button>
+          <button type="button" aria-label="Show slide 3"></button>
+          <button type="button" aria-label="Show slide 4"></button>
+        </div>
+        <button type="button" class="home-carousel-next" aria-label="Next solution">→</button>
+      </div>
+      <p class="home-carousel-status" aria-live="polite" aria-atomic="true">Slide 1 of 4</p>
+    </div>
   </div>
 </section>
-
 
 <!-- IMPACT & EXPERIENCE COUNTERS -->
 <section class="impact-section" aria-labelledby="impact-title">
@@ -1188,7 +1217,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <!-- MAIN SITE JAVASCRIPT -->
-<script src="js/site.js?v=mlina-homepage-fix-20261127-2" defer></script>
+<script src="js/site.js?v=mlina-carousel-fix-20261127-3" defer></script>
 
 </body>
 </html>
