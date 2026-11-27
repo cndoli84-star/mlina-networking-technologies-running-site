@@ -784,3 +784,92 @@ textarea:focus-visible {
 .service-product-note{margin:10px 0 0;color:#718392;font-size:9px;line-height:1.35;text-align:right;}
 @media(max-width:760px){.service-product-showcase{width:calc(100% - 28px);margin:16px auto 20px;padding:13px 10px 10px}.service-product-row{display:flex;gap:9px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding:0 0 7px}.service-product-card{flex:0 0 66%;scroll-snap-align:start;padding:8px 7px}.service-product-image{height:100px}.service-product-card strong{font-size:11px}.service-product-name{font-size:9px;min-height:25px}.service-product-link{font-size:9px}.service-product-note{text-align:left}}
 @media(prefers-reduced-motion:reduce){.service-product-card{transition:none}}
+
+
+/* SERVICES DROPDOWN — TWO-COLUMN, COMPACT, ACCESSIBLE STATES */
+.nav-drop>.drop-menu{
+  display:none;
+  position:absolute;
+  top:calc(100% + 8px);
+  left:-18px;
+  width:min(470px,calc(100vw - 36px));
+  min-width:420px;
+  max-height:min(62vh,470px);
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding:10px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:4px 6px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  box-shadow:0 14px 35px #092b4c24;
+  z-index:1200;
+}
+.nav-drop.open>.drop-menu{display:grid}
+.nav-drop>.drop-menu a{
+  display:flex;
+  align-items:center;
+  min-width:0;
+  min-height:42px;
+  padding:9px 10px;
+  border-radius:6px;
+  color:#1d3550;
+  font-size:12.5px;
+  line-height:1.35;
+  text-decoration:none;
+  overflow-wrap:anywhere;
+  transition:background-color .16s ease,color .16s ease;
+}
+.nav-drop>.drop-menu a:hover,
+.nav-drop>.drop-menu a:focus-visible{
+  background:var(--green);
+  color:#fff;
+  outline:none;
+}
+.nav-drop>.drop-menu a[aria-current="page"],
+.nav-drop>.drop-menu a.active{
+  background:var(--blue);
+  color:#fff;
+}
+.nav-drop.active-parent>button,
+.nav-drop.open>button,
+.nav-drop>button[aria-current="page"]{
+  color:#fff;
+  background:var(--blue);
+  border-radius:6px;
+  padding-left:10px;
+  padding-right:10px;
+}
+.nav-drop>button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+@media(max-width:760px){
+  .nav-drop>.drop-menu{
+    position:static;
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    max-height:52vh;
+    margin:2px 0 9px;
+    padding:7px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:3px 5px;
+    background:#f7fafc;
+    border:1px solid var(--line);
+    box-shadow:none;
+  }
+  .nav-drop>.drop-menu a{
+    min-height:40px;
+    padding:8px 7px;
+    font-size:11.5px;
+    line-height:1.3;
+  }
+  .nav-drop.active-parent>button,
+  .nav-drop.open>button,
+  .nav-drop>button[aria-current="page"]{
+    width:100%;
+    padding:11px 10px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .nav-drop>.drop-menu a{transition:none}
+}
