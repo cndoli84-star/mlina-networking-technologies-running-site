@@ -683,3 +683,72 @@ textarea:focus-visible {
 .cross-site-resource-list a:hover{color:#073b70}
 .cross-site-resource-list a:focus-visible{outline:3px solid #0865a8;outline-offset:3px}
 @media(max-width:640px){.cross-site-resource-list{display:block}.cross-site-resource-list li{margin:8px 0}}
+
+
+/* RESPONSIVE SERVICE DIRECTORY + MOBILE NAVIGATION */
+.service-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.service-directory-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px #123d5c0a;
+  scroll-margin-top: 110px;
+}
+.service-directory-card h2 {
+  margin: 9px 0 8px;
+  color: var(--navy);
+  font-size: clamp(17px, 1.8vw, 22px);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.service-directory-card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.service-directory-card .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 4px;
+  line-height: 1.5;
+}
+@media (max-width: 760px) {
+  .service-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .service-directory-card { padding: 15px; }
+  .service-directory-card .eyebrow { font-size: 9px; letter-spacing: 1px; }
+  .service-directory-card h2 { font-size: 16px; }
+  .service-directory-card p { font-size: 12px; line-height: 1.5; }
+  .nav.active {
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: max(22px, env(safe-area-inset-bottom));
+  }
+  .nav-drop { width: 100%; }
+  .nav-drop > button { min-height: 44px; }
+  .drop-menu {
+    max-height: 42dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .drop-menu a { min-height: 40px; display: flex; align-items: center; }
+}
+@media (max-width: 359px) {
+  .service-directory { grid-template-columns: 1fr; }
+  .service-directory-card { padding: 18px; }
+  .service-directory-card h2 { font-size: 18px; }
+  .service-directory-card p { font-size: 13px; }
+}
