@@ -237,55 +237,97 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // SET CURRENT PAGE STATE ACROSS ALL NAVIGATION GROUPS
+
+// SET CURRENT PAGE STATE ACROSS ALL NAVIGATION GROUPS
 document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     if (!nav) return;
 
     const currentPath = (value) => {
         let path = value || '/';
-        try { path = new URL(path, window.location.origin).pathname; } catch (_) {}
-        path = path.replace(/\\/+$/, '');
-        if (!path || path.endsWith('/index.html')) return path.replace(/index\\.html$/, '') || '/';
+
+        try {
+            path = new URL(path, window.location.origin).pathname;
+        } catch (error) {
+            return '/';
+        }
+
+        // Correctly remove trailing slashes
+        path = path.replace(/\/+$/, '');
+
+        // Treat index.html and the directory URL as the same page
+        if (!path || path.endsWith('/index.html')) {
+            return path.replace(/index\.html$/, '') || '/';
+        }
+
         return path;
     };
 
     const pagePath = currentPath(window.location.pathname);
     const pageHash = window.location.hash;
+
     const links = nav.querySelectorAll('a[href]');
     let activeLink = null;
 
     links.forEach(link => {
         link.classList.remove('active');
         link.removeAttribute('aria-current');
-        const target = new URL(link.getAttribute('href'), window.location.href);
+
+        let target;
+
+        try {
+            target = new URL(link.getAttribute('href'), window.location.href);
+        } catch (error) {
+            return;
+        }
+
         const samePage = currentPath(target.pathname) === pagePath;
         const sameHash = target.hash && target.hash === pageHash;
 
         if (samePage && (!target.hash || sameHash)) {
-            if (!activeLink || sameHash) activeLink = link;
+            if (!activeLink || sameHash) {
+                activeLink = link;
+            }
         }
     });
 
     if (activeLink) {
         activeLink.classList.add('active');
         activeLink.setAttribute('aria-current', 'page');
+
         const parentDropdown = activeLink.closest('.nav-drop');
+
         if (parentDropdown) {
             parentDropdown.classList.add('active-parent');
+
             const trigger = parentDropdown.querySelector(':scope > button');
-            if (trigger) trigger.setAttribute('aria-current', 'page');
+
+            if (trigger) {
+                trigger.setAttribute('aria-current', 'page');
+            }
         }
     }
 
-    // Landing pages represented by dropdowns remain visibly selected.
+    // Highlight the Services parent on the main services landing page
     const currentFile = pagePath.split('/').pop() || 'index.html';
+
     if (currentFile === 'services.html') {
-        const services = nav.querySelector('.nav-drop > .drop-menu a[href="services.html"]');
-        const parent = services ? services.closest('.nav-drop') : nav.querySelector('.nav-drop:first-of-type');
+        const services = nav.querySelector(
+            '.nav-drop > .drop-menu a[href="services.html"]'
+        );
+
+        const parent = services
+            ? services.closest('.nav-drop')
+            : nav.querySelector('.nav-drop:first-of-type');
+
         if (parent) {
             parent.classList.add('active-parent');
+
             const trigger = parent.querySelector(':scope > button');
-            if (trigger) trigger.setAttribute('aria-current', 'page');
+
+            if (trigger) {
+                trigger.setAttribute('aria-current', 'page');
+            }
         }
     }
 });
