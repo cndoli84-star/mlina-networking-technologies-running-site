@@ -752,3 +752,11 @@ textarea:focus-visible {
   .service-directory-card h2 { font-size: 18px; }
   .service-directory-card p { font-size: 13px; }
 }
+
+
+/* === Responsive editorial photography === */
+.site-photo-figure{width:min(1160px,calc(100% - 48px));margin:30px auto 12px;overflow:hidden;border-radius:16px;background:#eef4f7;border:1px solid #dce7ee;box-shadow:0 16px 42px rgba(7,59,112,.10)}
+.site-photo-figure img{display:block;width:100%;height:clamp(220px,34vw,430px);object-fit:cover;object-position:center 48%}
+.site-photo-figure figcaption{padding:10px 15px;font-size:11px;line-height:1.5;color:#5b7085;background:#f8fbfd}
+.site-photo-home{margin-top:0;margin-bottom:24px}
+@media(max-width:760px){.site-photo-figure{width:calc(100% - 30px);margin:20px auto 8px;border-radius:12px}.site-photo-figure img{height:clamp(190px,58vw,290px)}.site-photo-figure figcaption{font-size:10px;padding:9px 11px}}
