@@ -760,3 +760,11 @@ textarea:focus-visible {
 .site-photo-figure figcaption{padding:10px 15px;font-size:11px;line-height:1.5;color:#5b7085;background:#f8fbfd}
 .site-photo-home{margin-top:0;margin-bottom:24px}
 @media(max-width:760px){.site-photo-figure{width:calc(100% - 30px);margin:20px auto 8px;border-radius:12px}.site-photo-figure img{height:clamp(190px,58vw,290px)}.site-photo-figure figcaption{font-size:10px;padding:9px 11px}}
+
+
+/* COMPACT BRAND IMAGE STRIPS INSIDE SERVICE DIRECTORY CARDS */
+.service-brand-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:2px 0 15px;align-items:stretch}
+.service-brand-item{min-width:0;min-height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:7px 5px;border:1px solid #e1eaf1;border-radius:8px;background:#f8fbfd;text-align:center}
+.service-brand-item img{display:block;width:100%;max-width:78px;height:27px;object-fit:contain}
+.service-brand-item span{display:block;max-width:100%;color:#294b67;font-size:10px;font-weight:750;line-height:1.2;overflow-wrap:anywhere}
+@media(max-width:760px){.service-brand-row{gap:5px;margin-bottom:12px}.service-brand-item{min-height:59px;padding:6px 3px}.service-brand-item img{max-width:64px;height:23px}.service-brand-item span{font-size:9px}}
