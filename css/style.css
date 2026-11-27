@@ -873,3 +873,51 @@ textarea:focus-visible {
 @media(prefers-reduced-motion:reduce){
   .nav>.nav-drop:first-of-type>.drop-menu a{transition:none}
 }
+
+
+/* SITE-WIDE NAVIGATION STATES: GREEN HOVER / BLUE CURRENT PAGE */
+.nav>a,
+.nav-drop>button,
+.drop-menu a{
+  border-radius:6px;
+  transition:background-color .16s ease,color .16s ease,border-color .16s ease;
+}
+.nav>a:hover,
+.nav>a:focus-visible,
+.nav-drop>button:hover,
+.nav-drop>button:focus-visible,
+.drop-menu a:hover,
+.drop-menu a:focus-visible{
+  color:#fff!important;
+  background:#98be0d!important;
+  outline:none;
+}
+.nav>a[aria-current="page"],
+.nav>a.active,
+.nav-drop>button[aria-current="page"],
+.nav-drop.active-parent>button,
+.drop-menu a[aria-current="page"],
+.drop-menu a.active{
+  color:#fff!important;
+  background:#0879c9!important;
+}
+.nav>a[aria-current="page"],
+.nav>a.active,
+.nav-drop>button[aria-current="page"],
+.nav-drop.active-parent>button{
+  padding-left:10px;
+  padding-right:10px;
+}
+.nav>a.nav-cta:hover,
+.nav>a.nav-cta:focus-visible{
+  background:#98be0d!important;
+  color:#fff!important;
+}
+.nav>a.nav-cta[aria-current="page"],
+.nav>a.nav-cta.active{
+  background:#0879c9!important;
+  color:#fff!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .nav>a,.nav-drop>button,.drop-menu a{transition:none}
+}
