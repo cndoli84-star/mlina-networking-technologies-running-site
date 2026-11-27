@@ -1,45 +1,81 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // MOBILE NAVIGATION
+    // RESPONSIVE NAVIGATION AND DROPDOWN CONTROLS
     const toggle = document.querySelector('.menu-toggle');
     const navEl = document.querySelector('.nav');
 
     if (toggle && navEl) {
-
         toggle.addEventListener('click', () => {
             const open = navEl.classList.toggle('active');
-
             toggle.setAttribute('aria-expanded', String(open));
             toggle.textContent = open ? '×' : '☰';
         });
+    }
 
-        // NAVIGATION DROPDOWNS
-        navEl.querySelectorAll('.nav-drop > button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const parent = btn.parentElement;
-                const open = parent.classList.toggle('open');
+    if (navEl) {
+        const dropdowns = Array.from(navEl.querySelectorAll('.nav-drop'));
+        const closeDropdowns = (except = null) => {
+            dropdowns.forEach(drop => {
+                if (drop !== except) {
+                    drop.classList.remove('open');
+                    const button = drop.querySelector(':scope > button');
+                    if (button) button.setAttribute('aria-expanded', 'false');
+                }
+            });
+        };
 
-                btn.setAttribute('aria-expanded', String(open));
+        dropdowns.forEach(drop => {
+            const button = drop.querySelector(':scope > button');
+            if (!button) return;
+            button.setAttribute('aria-haspopup', 'true');
+            button.addEventListener('click', event => {
+                event.preventDefault();
+                const willOpen = !drop.classList.contains('open');
+                closeDropdowns(drop);
+                drop.classList.toggle('open', willOpen);
+                button.setAttribute('aria-expanded', String(willOpen));
+            });
+            drop.addEventListener('mouseenter', () => {
+                if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                    closeDropdowns(drop);
+                    drop.classList.add('open');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+            drop.addEventListener('mouseleave', () => {
+                if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                    drop.classList.remove('open');
+                    button.setAttribute('aria-expanded', 'false');
+                }
             });
         });
 
-        // CLOSE MENU WHEN CLICKING OUTSIDE
-        document.addEventListener('click', e => {
-            if (!navEl.contains(e.target) && !toggle.contains(e.target)) {
+        document.addEventListener('click', event => {
+            if (!navEl.contains(event.target)) closeDropdowns();
+            if (toggle && !toggle.contains(event.target) && !navEl.contains(event.target)) {
                 navEl.classList.remove('active');
-
                 toggle.setAttribute('aria-expanded', 'false');
                 toggle.textContent = '☰';
             }
         });
 
-        // CLOSE MENU AFTER SELECTING A LINK ON MOBILE
-        navEl.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
-                if (window.innerWidth <= 760) {
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                closeDropdowns();
+                if (toggle) {
                     navEl.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.textContent = '☰';
+                }
+            }
+        });
 
+        navEl.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeDropdowns();
+                if (window.innerWidth <= 760 && toggle) {
+                    navEl.classList.remove('active');
                     toggle.setAttribute('aria-expanded', 'false');
                     toggle.textContent = '☰';
                 }
