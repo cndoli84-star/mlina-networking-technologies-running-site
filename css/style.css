@@ -1003,3 +1003,86 @@ textarea:focus-visible {
     scroll-snap-align:start;
   }
 }
+
+
+/* HOMEPAGE CORE SOLUTIONS — FOUR VISUAL SERVICE CARDS */
+.home-solutions-gallery{
+  width:min(1200px,calc(100% - 48px));
+  margin:0 auto 30px;
+}
+.home-solutions-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+  align-items:stretch;
+}
+.home-solution-card{
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  overflow:hidden;
+  border:1px solid #dce7ef;
+  border-radius:13px;
+  background:#fff;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(7,59,112,.07);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.home-solution-card:hover,
+.home-solution-card:focus-visible{
+  transform:translateY(-4px);
+  border-color:#98be0d;
+  box-shadow:0 15px 30px rgba(7,59,112,.13);
+  outline:none;
+}
+.home-solution-image{
+  display:block;
+  width:100%;
+  height:clamp(135px,15vw,190px);
+  overflow:hidden;
+  background:#edf3f7;
+}
+.home-solution-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .35s ease;
+}
+.home-solution-card:hover .home-solution-image img{transform:scale(1.045)}
+.home-solution-copy{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  gap:6px;
+  padding:14px 15px 16px;
+}
+.home-solution-copy strong{
+  color:#073b70;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.25;
+}
+.home-solution-copy small{
+  color:#5b7085;
+  font-size:11px;
+  line-height:1.5;
+}
+@media(max-width:760px){
+  .home-solutions-gallery{width:calc(100% - 30px);margin:0 auto 24px}
+  .home-solutions-grid{
+    display:flex;
+    gap:11px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:2px 2px 12px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .home-solution-card{flex:0 0 min(78vw,285px);scroll-snap-align:start}
+  .home-solution-image{height:155px}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-solution-card,.home-solution-image img{transition:none}
+}
