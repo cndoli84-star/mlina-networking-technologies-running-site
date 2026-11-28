@@ -1446,3 +1446,84 @@ textarea:focus-visible {
   .home-page *{scroll-behavior:auto}
 }
 
+
+
+/* MLINA IN NUMBERS — compact six-card overview */
+.home-page .impact-section{
+  padding:24px 0 22px;
+}
+.home-page .impact-heading{
+  max-width:760px;
+  margin:0 auto 15px;
+}
+.home-page .impact-heading .eyebrow{font-size:9px;letter-spacing:.13em}
+.home-page .impact-heading h2{
+  margin:5px 0 0;
+  font-size:clamp(19px,2.1vw,25px);
+  line-height:1.12;
+}
+.home-page .impact-heading p{display:none}
+.home-page .impact-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+.home-page .impact-card{
+  min-height:0;
+  height:132px;
+  padding:10px 13px;
+  border-radius:11px;
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr);
+  grid-template-rows:auto auto 1fr;
+  column-gap:9px;
+  align-content:center;
+}
+.home-page .impact-card .impact-icon{
+  grid-column:1;
+  grid-row:1 / span 2;
+  width:30px;
+  height:30px;
+  margin:0;
+  border-radius:8px;
+  font-size:17px;
+}
+.home-page .impact-card .impact-number{
+  grid-column:2;
+  grid-row:1;
+  margin:0 0 3px;
+  font-size:clamp(25px,2.7vw,34px);
+}
+.home-page .impact-card h3{
+  grid-column:2;
+  grid-row:2;
+  align-self:start;
+  margin:0;
+  font-size:12px;
+  line-height:1.2;
+}
+.home-page .impact-card p{
+  grid-column:1 / -1;
+  grid-row:3;
+  align-self:end;
+  margin:5px 0 0;
+  font-size:10px;
+  line-height:1.25;
+  color:#d6e5f1;
+}
+.home-page .impact-note{
+  margin:8px auto 0;
+  font-size:9px;
+  line-height:1.3;
+}
+@media(max-width:760px){
+  .home-page .impact-section{padding:20px 0 18px}
+  .home-page .impact-heading{margin-bottom:12px}
+  .home-page .impact-heading h2{font-size:19px}
+  .home-page .impact-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .home-page .impact-card{height:124px;padding:9px;column-gap:7px}
+  .home-page .impact-card .impact-icon{width:26px;height:26px;font-size:15px}
+  .home-page .impact-card .impact-number{font-size:26px}
+  .home-page .impact-card h3{font-size:11px}
+  .home-page .impact-card p{font-size:9px;line-height:1.2}
+  .home-page .impact-note{font-size:8px}
+}
