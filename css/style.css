@@ -1591,3 +1591,104 @@ textarea:focus-visible {
   .home-page .industries-served-section .service-card h3{font-size:12px}
   .home-page .industries-served-section .service-card p{font-size:10.5px;line-height:1.35}
 }
+
+
+/* HOME ICT & ELV SERVICES — compact 3x3 service overview */
+.home-page .home-core-services{
+  padding:24px 0 26px;
+}
+.home-page .home-core-services .section-head{
+  max-width:900px;
+  margin:0 auto 13px;
+}
+.home-page .home-core-services .section-head .eyebrow{
+  font-size:10px;
+  letter-spacing:.13em;
+}
+.home-page .home-core-services .section-head h2{
+  margin:5px 0 6px;
+  font-size:clamp(21px,2.25vw,27px);
+  line-height:1.15;
+}
+.home-page .home-core-services .section-head p{
+  max-width:800px;
+  margin:0 auto;
+  font-size:12.5px;
+  line-height:1.4;
+}
+.home-page .home-core-services .service-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:9px;
+}
+.home-page .home-core-services .service-card{
+  min-width:0;
+  min-height:92px;
+  padding:10px 12px;
+  border-radius:9px;
+  display:grid;
+  grid-template-columns:25px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:8px;
+  align-content:center;
+}
+.home-page .home-core-services .service-icon{
+  grid-column:1;
+  grid-row:1 / span 2;
+  width:24px;
+  height:24px;
+  font-size:14px;
+  border-radius:6px;
+}
+.home-page .home-core-services .service-card h3{
+  grid-column:2;
+  grid-row:1;
+  margin:0;
+  font-size:12px;
+  line-height:1.25;
+}
+.home-page .home-core-services .service-readmore{
+  grid-column:2;
+  grid-row:2;
+  margin-top:5px;
+  font-size:10px;
+  line-height:1.35;
+}
+.home-page .home-core-services .service-readmore summary{
+  display:inline-block;
+  color:#38bdf8;
+  font-size:10px;
+  font-weight:800;
+  cursor:pointer;
+  list-style:none;
+}
+.home-page .home-core-services .service-readmore summary::-webkit-details-marker{display:none}
+.home-page .home-core-services .service-readmore summary::after{
+  content:" +";
+  color:#98be0d;
+}
+.home-page .home-core-services .service-readmore[open] summary::after{content:" −"}
+.home-page .home-core-services .service-readmore p{
+  margin:5px 0;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+.home-page .home-core-services .service-readmore .learn{
+  display:inline-block;
+  margin:2px 0 0;
+  font-size:10px;
+}
+@media(max-width:900px){
+  .home-page .home-core-services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .home-page .home-core-services{padding:20px 0}
+  .home-page .home-core-services .section-head{margin-bottom:11px}
+  .home-page .home-core-services .section-head h2{font-size:20px}
+  .home-page .home-core-services .section-head p{font-size:11.5px}
+  .home-page .home-core-services .service-grid{gap:7px}
+  .home-page .home-core-services .service-card{min-height:82px;padding:8px}
+  .home-page .home-core-services .service-card h3{font-size:11px}
+  .home-page .home-core-services .service-readmore,
+  .home-page .home-core-services .service-readmore summary{font-size:9px}
+}
